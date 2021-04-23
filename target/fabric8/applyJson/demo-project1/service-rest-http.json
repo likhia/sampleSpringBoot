@@ -1,0 +1,113 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "app.kubernetes.io/vcs-uri" : "git@github.com:snowdrop/rest-http-example.git",
+      "fabric8.io/git-branch" : "main",
+      "fabric8.io/git-commit" : "d1eda16fc506388f9800c9af27629c778738a4de",
+      "fabric8.io/git-url" : "https://github.com/likhia/sampleSpringBoot.git",
+      "fabric8.io/issue-system" : "GitHub",
+      "fabric8.io/issue-tracker-url" : "https://github.com/snowdrop/spring-boot-bom/issues",
+      "fabric8.io/scm-tag" : "2.3.2.Beta1",
+      "fabric8.io/scm-url" : "https://github.com/snowdrop/spring-boot-bom/rest-http",
+      "prometheus.io/port" : "9779",
+      "prometheus.io/scrape" : "true"
+    },
+    "creationTimestamp" : "2021-04-23T07:15:08Z",
+    "labels" : {
+      "app" : "rest-http",
+      "app.kubernetes.io/component" : "frontend",
+      "app.kubernetes.io/name" : "http-api",
+      "app.kubernetes.io/part-of" : "http-api-example",
+      "app.openshift.io/runtime" : "rh-spring-boot",
+      "app.openshift.io/runtime-version" : "2.3.2.RELEASE",
+      "expose" : "true",
+      "group" : "dev.snowdrop.example",
+      "provider" : "fabric8",
+      "version" : "2.3.2-1-SNAPSHOT"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:app.kubernetes.io/vcs-uri" : { },
+            "f:fabric8.io/git-branch" : { },
+            "f:fabric8.io/git-commit" : { },
+            "f:fabric8.io/git-url" : { },
+            "f:fabric8.io/issue-system" : { },
+            "f:fabric8.io/issue-tracker-url" : { },
+            "f:fabric8.io/scm-tag" : { },
+            "f:fabric8.io/scm-url" : { },
+            "f:prometheus.io/port" : { },
+            "f:prometheus.io/scrape" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:app.kubernetes.io/component" : { },
+            "f:app.kubernetes.io/name" : { },
+            "f:app.kubernetes.io/part-of" : { },
+            "f:app.openshift.io/runtime" : { },
+            "f:app.openshift.io/runtime-version" : { },
+            "f:expose" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:ports" : {
+            "." : { },
+            "k:{\"port\":8080,\"protocol\":\"TCP\"}" : {
+              "." : { },
+              "f:name" : { },
+              "f:port" : { },
+              "f:protocol" : { },
+              "f:targetPort" : { }
+            }
+          },
+          "f:selector" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { }
+          },
+          "f:sessionAffinity" : { },
+          "f:type" : { }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2021-04-23T07:15:08Z"
+    } ],
+    "name" : "rest-http",
+    "namespace" : "demo-project1",
+    "resourceVersion" : "1239782",
+    "selfLink" : "/api/v1/namespaces/demo-project1/services/rest-http",
+    "uid" : "9f0fdcce-cb55-4aa7-93ff-6d3e254dd036"
+  },
+  "spec" : {
+    "clusterIP" : "172.30.68.17",
+    "ports" : [ {
+      "name" : "http",
+      "port" : 8080,
+      "protocol" : "TCP",
+      "targetPort" : 8080
+    } ],
+    "selector" : {
+      "app" : "rest-http",
+      "group" : "dev.snowdrop.example",
+      "provider" : "fabric8"
+    },
+    "sessionAffinity" : "None",
+    "type" : "ClusterIP",
+    "clusterIPs" : [ "172.30.68.17" ]
+  },
+  "status" : {
+    "loadBalancer" : { }
+  }
+}
