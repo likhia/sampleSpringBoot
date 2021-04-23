@@ -34,7 +34,7 @@ public class GreetingEndpoint {
     @GET
     @Produces("application/json")
     public Greeting greeting(@QueryParam("name") @DefaultValue("World") String name) {
-        String prefix = System.getenv().getOrDefault("GREETING_PREFIX", "Good Afternoon");
+        String prefix = System.getenv().getOrDefault("GREETING_PREFIX", "Good Morning");
         
         if(greeterMessageFormat == null) {
             greeterMessageFormat = "%s %s";
